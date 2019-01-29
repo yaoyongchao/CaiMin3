@@ -1,4 +1,6 @@
 /*
+package com.vcaidian.baselib.base*//*
+
 package com.vcaidian.wclib.base
 
 import android.app.ActivityManager
@@ -20,11 +22,22 @@ import com.vcaidian.wclib.utils.ActivityUtil
 import com.vcaidian.wclib.widget.CustomToolBar
 
 */
+/*
+
+*//*
+
+*/
 /**
  * Author: Austin
  * Date: 2018/10/8
  * Description: Activity基类
  *//*
+*/
+/*
+*//*
+
+*/
+/*
 
 abstract class BaseActivity : AppCompatActivity(), View.OnClickListener , CustomToolBar.OnClickLeftListener, CustomToolBar.OnClickRightListener {
     private val BASE_VIEW_ID: Int = R.layout.activity_base
@@ -78,24 +91,60 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener , Custom
         return fullScreen
     }
 
-    */
+    *//*
+*/
+/*
+
+*//*
+
+*/
 /**
      * 加载布局
      *//*
+*/
+/*
+*//*
+
+*/
+/*
 
     abstract fun layoutId(): Int
 
-    */
+    *//*
+*/
+/*
+
+*//*
+
+*/
 /**
      * 初始化数据
      *//*
+*/
+/*
+*//*
+
+*/
+/*
 
     abstract fun initData()
 
-    */
+    *//*
+*/
+/*
+
+*//*
+
+*/
 /**
      * 初始化 View
      *//*
+*/
+/*
+*//*
+
+*/
+/*
 
     abstract fun initView()
     abstract fun setListener()
@@ -143,7 +192,13 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener , Custom
         MobclickAgent.onPause(this)
     }
 
-    */
+    *//*
+*/
+/*
+
+*//*
+
+*/
 /*override fun onResume() {
         super.onResume()
         L.i("onResume")
@@ -163,6 +218,12 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener , Custom
         super.onStop()
         L.i("onStop")
     }*//*
+*/
+/*
+*//*
+
+*/
+/*
 
 
     override fun onDestroy() {
@@ -176,4 +237,8 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener , Custom
 
 
 }
+*//*
+*/
+/*
+
 */

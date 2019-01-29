@@ -1,4 +1,4 @@
-package com.vcaidian.wclib.base
+package com.vcaidian.baselib.base
 
 import android.os.Bundle
 import com.vcaidian.baselib.utils.L

@@ -1,11 +1,6 @@
-/*
-package com.vcaidian.baselib.base*//*
+package com.vcaidian.baselib.base
 
-package com.vcaidian.wclib.base
-
-import android.app.ActivityManager
 import android.content.Context
-import android.icu.lang.UCharacter.GraphemeClusterBreak.L
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
@@ -16,29 +11,15 @@ import com.umeng.analytics.MobclickAgent
 import com.umeng.message.PushAgent
 import com.vcaidian.baselib.R
 import com.vcaidian.baselib.utils.L
-import com.vcaidian.wclib.R
+import com.vcaidian.baselib.widget.CustomToolBar
 import com.vcaidian.wclib.utils.ActivityManager
 import com.vcaidian.wclib.utils.ActivityUtil
-import com.vcaidian.wclib.widget.CustomToolBar
 
-*/
-/*
-
-*//*
-
-*/
 /**
  * Author: Austin
  * Date: 2018/10/8
  * Description: Activity基类
- *//*
-*/
-/*
-*//*
-
-*/
-/*
-
+ */
 abstract class BaseActivity : AppCompatActivity(), View.OnClickListener , CustomToolBar.OnClickLeftListener, CustomToolBar.OnClickRightListener {
     private val BASE_VIEW_ID: Int = R.layout.activity_base
     lateinit var mContext: Context
@@ -91,61 +72,19 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener , Custom
         return fullScreen
     }
 
-    *//*
-*/
-/*
-
-*//*
-
-*/
-/**
+    /**
      * 加载布局
-     *//*
-*/
-/*
-*//*
-
-*/
-/*
-
+     */
     abstract fun layoutId(): Int
 
-    *//*
-*/
-/*
-
-*//*
-
-*/
-/**
+    /**
      * 初始化数据
-     *//*
-*/
-/*
-*//*
-
-*/
-/*
-
+     */
     abstract fun initData()
 
-    *//*
-*/
-/*
-
-*//*
-
-*/
-/**
+    /**
      * 初始化 View
-     *//*
-*/
-/*
-*//*
-
-*/
-/*
-
+     */
     abstract fun initView()
     abstract fun setListener()
 
@@ -192,14 +131,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener , Custom
         MobclickAgent.onPause(this)
     }
 
-    *//*
-*/
-/*
-
-*//*
-
-*/
-/*override fun onResume() {
+    /*override fun onResume() {
         super.onResume()
         L.i("onResume")
     }
@@ -217,14 +149,7 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener , Custom
     override fun onStop() {
         super.onStop()
         L.i("onStop")
-    }*//*
-*/
-/*
-*//*
-
-*/
-/*
-
+    }*/
 
     override fun onDestroy() {
         super.onDestroy()
@@ -237,8 +162,3 @@ abstract class BaseActivity : AppCompatActivity(), View.OnClickListener , Custom
 
 
 }
-*//*
-*/
-/*
-
-*/

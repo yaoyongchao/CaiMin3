@@ -1,1 +1,1 @@
-include ':app', ':datalib', ':baselib', ':dblib', ':httplib', ':utilslib'
+include ':app', ':datalib', ':baselib', ':dblib', ':httplib', ':utilslib', ':threelib'

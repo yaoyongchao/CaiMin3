@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.vcaidian.baselib.utils.L
-import com.vcaidian.wclib.widget.CustomToolBar
 
 /**
  * Author: Austin

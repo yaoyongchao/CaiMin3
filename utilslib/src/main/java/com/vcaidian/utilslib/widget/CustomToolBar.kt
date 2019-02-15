@@ -1,4 +1,4 @@
-package com.vcaidian.wclib.widget
+package com.vcaidian.utilslib.widget
 import android.content.Context
 import android.support.annotation.DrawableRes
 import android.util.AttributeSet

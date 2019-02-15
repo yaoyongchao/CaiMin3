@@ -1,2 +1,4 @@
 <resources>
+    <string name="toast_network_error">网络异常，请检查网络</string>
+    <string name="data_loading">数据记载中...</string>
 </resources>

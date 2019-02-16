@@ -1,6 +1,6 @@
-package com.vcaidian.baselib.http
+package com.vcaidian.httplib.http
 
-import com.vcaidian.wclib.config.DebugConfig
+import com.vcaidian.httplib.config.DebugConfig
 
 
 /**

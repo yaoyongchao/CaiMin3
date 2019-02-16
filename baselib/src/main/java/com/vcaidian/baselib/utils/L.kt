@@ -4,7 +4,7 @@ import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
 import com.vcaidian.baselib.BuildConfig
-import com.vcaidian.wclib.config.DebugConfig
+import com.vcaidian.httplib.config.DebugConfig
 
 
 /**

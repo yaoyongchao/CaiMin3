@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <!--登录页，微信登录按钮-->
+    <color name="colorWc">#1dbc24</color>
+    <color name="bgTop">@color/bg_toolbar</color>
+    <color name="txtBalance">#333333</color>
+    <color name="btnRedNormal">#FF3437</color>
+    <color name="btnRedPressed">#e7272a</color>
 </resources>

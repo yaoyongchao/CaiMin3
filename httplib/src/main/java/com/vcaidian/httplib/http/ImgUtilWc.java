@@ -10,8 +10,8 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
+import com.vcaidian.httplib.R;
 import com.vcaidian.httplib.config.WcConfig;
-import com.vcaidian.utilslib.R;
 
 /**
  * Author: Austin

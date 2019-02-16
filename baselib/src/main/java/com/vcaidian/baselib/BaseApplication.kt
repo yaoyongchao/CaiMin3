@@ -1,10 +1,7 @@
-/*
-package com.vcaidian.wclib
+package com.vcaidian.baselib
 
-import android.app.Application
 import android.content.Context
-import android.content.Intent
-import android.util.Log
+import android.support.multidex.MultiDexApplication
 import com.alibaba.android.arouter.launcher.ARouter
 import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle
@@ -16,29 +13,23 @@ import com.umeng.commonsdk.UMConfigure
 import com.umeng.message.IUmengRegisterCallback
 import com.umeng.message.PushAgent
 import com.umeng.message.UTrack
-import com.vcaidian.baselib.BuildConfig
-import com.vcaidian.baselib.R
 import com.vcaidian.baselib.utils.AppUtil
 import com.vcaidian.baselib.utils.L
 import com.vcaidian.baselib.utils.SPUtils
-import com.vcaidian.wclib.config.DebugConfig
-import io.reactivex.Observable
-import io.reactivex.ObservableOnSubscribe
-import io.reactivex.functions.Consumer
-import io.reactivex.schedulers.Schedulers
+import com.vcaidian.httplib.config.DebugConfig
+import com.vcaidian.httplib.config.WcConfig
 import org.android.agoo.huawei.HuaWeiRegister
 import org.android.agoo.xiaomi.MiPushRegistar
 
 
-*/
 /**
  * Author: Austin
  * Date: 2018/10/8
  * Description:
- *//*
+ */
 
 //open class BaseApplication: Application(){
-open class BaseApplication: Application() {
+open class BaseApplication: MultiDexApplication() {
 
     val SP_NAME = "caimin"
     //小米
@@ -58,13 +49,15 @@ open class BaseApplication: Application() {
     override fun onCreate() {
         super.onCreate()
 
-        Observable.create(ObservableOnSubscribe<Int> { emitter ->
+        /*Observable.create(ObservableOnSubscribe<Int> { emitter ->
             emitter.onNext(1)
         }).subscribeOn(Schedulers.newThread())
                 .observeOn(Schedulers.newThread())
                 .subscribe(Consumer {
-                    initViews()
-                })
+//                    initViews();
+                })*/
+
+        initViews()
     }
 
     open fun initViews() {
@@ -79,7 +72,7 @@ open class BaseApplication: Application() {
             ARouter.openLog()//打开日志
             ARouter.openDebug()//打开调式模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
         }
-        ARouter.init(this.application)
+        ARouter.init(this)
 
         //Bugly
         initBuylg()
@@ -97,24 +90,22 @@ open class BaseApplication: Application() {
 
         UMConfigure.setLogEnabled(true)
 
-        */
 /**
          * 设置日志加密
          * 参数：boolean 默认为false（不加密）
-         *//*
+         */
 
 //        UMConfigure.setEncryptEnabled(false)
-        */
 /**
          *  设置场景类型接口
          *  参数：上下文
          *  参数： 模式
-         *//*
+         */
 
 //        MobclickAgent.setScenarioType(appContext, MobclickAgent.EScenarioType.E_UM_NORMAL)
 
 
-        mPushAgent = PushAgent.getInstance(this.application!!)
+        mPushAgent = PushAgent.getInstance(this!!)
         mPushAgent?.register(object : IUmengRegisterCallback{
             override fun onSuccess(p0: String?) {
                 //注册成功会返回Devices Token
@@ -127,9 +118,9 @@ open class BaseApplication: Application() {
 
         })
         //华为推送
-        HuaWeiRegister.register(this.application)
+        HuaWeiRegister.register(this)
         //小米推送
-        MiPushRegistar.register(this.application, miAppId, miAppKey)
+        MiPushRegistar.register(this, miAppId, miAppKey)
     }
 
 
@@ -142,7 +133,7 @@ open class BaseApplication: Application() {
         // 获取当前进程名
         val processName = AppUtil.getProcessName(android.os.Process.myPid())
         // 设置是否为上报进程
-        val strategy = UserStrategy(context)
+        val strategy = CrashReport.UserStrategy(context)
         strategy.isUploadProcess = processName == null || processName == packageName
         // 初始化Bugly
         CrashReport.initCrashReport(context, WcConfig.BUGLY_ID, DebugConfig.DEBUG, strategy)
@@ -168,11 +159,10 @@ open class BaseApplication: Application() {
         }
 
         var mPushAgent : PushAgent? = null
-        */
 /**
          * 友盟设置别名
-         * @param userId
-         *//*
+         * @param userId*/
+
 
         public fun setAlias(userId:String) {
             L.i("userId: $userId")
@@ -184,4 +174,4 @@ open class BaseApplication: Application() {
         }
     }
 
-}*/
+}

@@ -1,6 +1,6 @@
 package com.vcaidian.httplib.http;
 
-import com.vcaidian.baselib.utils.L;
+import android.util.Log;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 
@@ -46,7 +46,7 @@ public class SSLUtils {
                 new HttpLoggingInterceptor.Logger() {
                     @Override
                     public void log(String message) {
-                        L.Companion.e("OkHTTP--" + message);
+                        Log.e("OkHTTP--" , message);
 
                     }
                 }

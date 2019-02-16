@@ -1,8 +1,8 @@
 package com.vcaidian.baselib.http
 
 
+import android.util.Log
 import com.vcaidian.baselib.http.entity.BaseEntity
-import com.vcaidian.baselib.utils.L
 import io.reactivex.Observer
 import io.reactivex.annotations.NonNull
 import io.reactivex.disposables.Disposable
@@ -28,19 +28,19 @@ abstract class BaseObserver1<T> : Observer<BaseEntity<T>> {
             val t = tBaseEntity.data
             onSuccess(t)
         } else {
-            L.i("onNext--Failure--code:" + tBaseEntity.code + "--Message:" + tBaseEntity.msg)
+            Log.i(TAG,"onNext--Failure--code:" + tBaseEntity.code + "--Message:" + tBaseEntity.msg)
             onFail(tBaseEntity.msg)
         }
 
     }
 
     override fun onError(@NonNull e: Throwable) {
-        L.e("TAG--onError--" + e.toString())
+        Log.e(TAG,"TAG--onError--" + e.toString())
 //        ExceptionHandle.handleException(e)
     }
 
     override fun onComplete() {
-        L.d("TAG--onComplete")
+        Log.d(TAG,"TAG--onComplete")
 
     }
 

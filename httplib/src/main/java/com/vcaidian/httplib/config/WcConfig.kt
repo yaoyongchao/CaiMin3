@@ -1,6 +1,6 @@
 package com.vcaidian.httplib.config
-import com.vcaidian.baselib.http.BaseApi
-import com.vcaidian.wclib.config.DebugConfig
+
+import com.vcaidian.httplib.http.BaseApi
 
 object WcConfig {
     //微信参数配置

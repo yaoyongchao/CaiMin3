@@ -1,3 +1,4 @@
+/*
 package com.vcaidian.httplib.http;
 
 import android.content.ContentResolver;
@@ -19,8 +20,6 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.util.TypedValue;
 import android.widget.ImageView;
-import com.vcaidian.utilslib.utils.Coder;
-import com.vcaidian.utilslib.utils.Utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -295,14 +294,20 @@ public class ImageUtils {
 
 	private void drawCircleBorder(Canvas canvas,int size, int radius, int color) {
 		Paint paint = new Paint();
-        /* 去锯齿 */
+        */
+/* 去锯齿 *//*
+
 		paint.setAntiAlias(true);
 		paint.setFilterBitmap(true);
 		paint.setDither(true);
 		paint.setColor(color);
-        /* 设置paint的　style　为STROKE：空心 */
+        */
+/* 设置paint的　style　为STROKE：空心 *//*
+
 		paint.setStyle(Paint.Style.STROKE);
-        /* 设置paint的外框宽度 */
+        */
+/* 设置paint的外框宽度 *//*
+
 		paint.setStrokeWidth(1);
 		canvas.drawCircle(size / 2, size / 2, radius, paint);
 	}
@@ -318,13 +323,15 @@ public class ImageUtils {
 		canvas_m.drawPath(path, paint_m);
 	}
 
-	/**
+	*/
+/**
 	 * 根据原图和变长绘制圆形图片
 	 *
 	 * @param source
 	 * @param min
 	 * @return
-	 */
+	 *//*
+
 	public static Bitmap createCircleImage(Bitmap source, int min)
 	{
 		Bitmap bitmap = ImageUtils.resizeImage(source, min-1, min-1);
@@ -334,33 +341,43 @@ public class ImageUtils {
 		Bitmap target = Bitmap.createBitmap(min, min, Bitmap.Config.ARGB_8888);
 
 
-		/**
+		*/
+/**
 		 * 产生一个同样大小的画布
-		 */
+		 *//*
+
 		Canvas canvas = new Canvas(target);
 		canvas.drawCircle(min / 2, min / 2, min / 2, paint);
-		/**
+		*/
+/**
 		 * 使用SRC_IN
-		 */
+		 *//*
+
 		paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
-		/**
+		*/
+/**
 		 * 绘制图片
-		 */
+		 *//*
+
 		canvas.drawBitmap(bitmap, 1, 1, paint);
 		paint.setAntiAlias(true);
 		paint.setFilterBitmap(true);
 		paint.setDither(true);
 		paint.setColor(Color.BLACK);
-        /* 设置paint的　style　为STROKE：空心 */
+        */
+/* 设置paint的　style　为STROKE：空心 *//*
+
 		paint.setStyle(Paint.Style.STROKE);
 		paint.setStrokeWidth(1);
 		canvas.drawCircle(min / 2, min / 2, min/2, paint);
 
 		return target;
 	}
-	/**
+	*/
+/**
 	 * 根据路径获得图片信息并按比例压缩，返回bitmap
-	 */
+	 *//*
+
 	public static Bitmap getSmallBitmap(Bitmap image) {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		image.compress(Bitmap.CompressFormat.JPEG, 60, baos);// 质量压缩方法，这里100表示不压缩，把压缩后的数据存放到baos中
@@ -375,9 +392,11 @@ public class ImageUtils {
 		Bitmap bitmap = BitmapFactory.decodeStream(isBm, null, null);// 把ByteArrayInputStream数据生成图片
 		return bitmap;
 	}
-	/**
+	*/
+/**
 	 * 根据路径获得图片信息并按比例压缩，返回bitmap
-	 */
+	 *//*
+
 	public static Bitmap getSmallBitmap(String filePath) {
 		final BitmapFactory.Options options = new BitmapFactory.Options();
 		options.inJustDecodeBounds = true;//只解析图片边沿，获取宽高
@@ -521,3 +540,4 @@ public class ImageUtils {
 		return bitmap;
 	}
 }
+*/

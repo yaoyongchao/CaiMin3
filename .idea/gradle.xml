@@ -13,8 +13,6 @@
             <option value="$PROJECT_DIR$/datalib" />
             <option value="$PROJECT_DIR$/dblib" />
             <option value="$PROJECT_DIR$/httplib" />
-            <option value="$PROJECT_DIR$/threelib" />
-            <option value="$PROJECT_DIR$/utilslib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

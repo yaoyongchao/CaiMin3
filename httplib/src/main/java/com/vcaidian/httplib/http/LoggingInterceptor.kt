@@ -1,11 +1,12 @@
 
 
-import com.vcaidian.baselib.utils.L
+import android.util.Log
 import okhttp3.Interceptor
 import okhttp3.Response
 import java.io.IOException
 //https://blog.csdn.net/bunny1024/article/details/53504556?utm_source=blogxgwz0
 class LoggingInterceptor : Interceptor {
+    val  TAG = "BaseObserver"
     @Throws(IOException::class)
     override fun intercept(chain: Interceptor.Chain): Response {
         //这个chain里面包含了request和response，所以你要什么都可以从这里拿
@@ -15,7 +16,7 @@ class LoggingInterceptor : Interceptor {
         //        logger.info(String.format("发送请求 %s on %s%n%s",
         //                request.url(), chain.connection(), request.headers()));
 
-        L.e("http:  " + String.format("发送请求 %s on %s%n%s",
+        Log.e("http:  " , String.format("发送请求 %s on %s%n%s",
                 request.url(),
                 chain.connection(),
                 request.headers()))
@@ -37,7 +38,7 @@ class LoggingInterceptor : Interceptor {
 
 //        var responsebody = Gson().fromJson<BaseResponseBody>(responseBody.string(),BaseResponseBody::class.java)
 
-        L.e("http:  " + String.format("接收响应: [  %s  ] %n返回json: %s %n响应时间: %.1fms%n%s",
+        Log.e("http:  " , String.format("接收响应: [  %s  ] %n返回json: %s %n响应时间: %.1fms%n%s",
                                 response.request().url(),
                                 responseBody.string(),
 //                                    body,
